@@ -26,7 +26,25 @@
 
         body {
             background-image: linear-gradient(to bottom right, #e6ffff, #ccffff);
-            #ccffe6;
+            
+        }
+
+        .fizz {
+            color:darkblue
+        }
+
+        .buzz {
+            color:darkgreen
+        }
+
+        .fizzbuzz {
+            color:gold
+        }
+
+        .border {
+            border-color:black;
+
+                
         }
     </style>
 
@@ -47,11 +65,11 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="/Solve.html">Solve</a>
                     </li>
-                    <!--<li class="nav-item">
-                        <a class="nav-link" href="/Code.html">Code</a>
-                    </li>-->
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/richardtickler/FizzBuzzMiniProject">git</a>
+                        <a class="nav-link" href="/Code.html">Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/richardtickler/FizzBuzzMiniProject" target="_blank">Git</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://jaylins-portfolio.netlify.app/">Portfolio</a>
@@ -72,18 +90,18 @@
         <br />
         <div class="row">
             <div class="col text-center h3">
-                Please don't ask for an explanation about FizzBuzz. Just type in 2 integers and see for yourself
+                Any number divisible by three will be replaced with the word "fizz", and any number divisible by five with the word "buzz". Any number divisible by both will be replaced with "FizzBuzz"
             </div>
             <hr />
         </div>
    <br />
 
         <div class="row">
-            <div class="col btnWide">
-                <input id="fbInput1" placeholder="Enter Fizz!" />
+            <div class="col-4 offset-1">
+                <input id="fbInput1" placeholder="Enter Fizz!"class="btnWide" />
             </div>
-            <div class="col btnWide">
-                <input id="fbInput2" placeholder="Enter Buzz!" />
+            <div class="col-4 offset-1">
+                <input id="fbInput2" placeholder="Enter Buzz!"class="btnWide" />
             </div>
         </div>
         <br />
@@ -98,7 +116,7 @@
     <hr />
 
     <div class="row">
-        <div class="col">
+        <div class="col-10 offset-1 bg-white h2 border">
             <p id="fbOut"></p>
         </div>
     </div>
@@ -137,7 +155,7 @@
                 }
             }
 
-            $("#fbOut").html(output.join('<br />'));
+            $("#fbOut").html(output.join(', '));
         });
 
 
